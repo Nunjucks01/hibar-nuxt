@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+@import "../fontello/css/fontello.css";
+@import "./header.scss";
+@import "./section1.scss";
+@import "./section2.scss";
+@import "./section3.scss";
+@import "./section4.scss";
+@import "./footer.scss";
+@import "./introduction.scss";
+@import "./examples.scss";
+
+body {
+    font-family: "Cabin", sans-serif;
+    color: #1a1a1a;
+    p {
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+@media (min-width: 1500px){
+    .container {
+        max-width: 1465px;
+    }
+}

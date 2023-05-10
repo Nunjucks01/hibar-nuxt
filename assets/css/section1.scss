@@ -1,0 +1,248 @@
+.phone {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 64px;
+    background-color: #4ab6e8;
+    margin-left: auto;
+    margin-top: 15px;
+    p {
+        color: #ffffff;
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+}
+.mt-15{
+    margin-top: 15px;
+}
+
+button {
+    background-color: #4ab6e8;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 0;
+    line-height: 16px;
+}
+
+.left-content {
+    position: relative;
+    padding-right: 9px;
+    display: flex;
+    flex-direction: column;
+    &::after {
+        height: calc(100% - 88px);
+        width: 150%;
+        position: absolute;
+        content: "";
+        right: 9px;
+        top: 88px;
+        background-color: #f2f2f2;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 60px;
+        line-height: 60px;
+        margin-top: 40px;
+        margin-bottom: 13px;
+        font-weight: bold;
+    }
+    p {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    img {
+        filter: drop-shadow(5px 5px 29px rgba(0, 0, 0, 0.4));
+    }
+}
+
+.right-content {
+    padding-left: 9px;
+    img {
+        width: 100%;
+    }
+}
+
+input::placeholder {
+    color: #b8b2ac;
+}
+
+input {
+    padding: 12px 14px;
+    line-height: 16px;
+    border: none;
+    margin-bottom: 11px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #262626;
+    font-weight: bold;
+}
+
+.title-wrap {
+    height: 88px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 41px;
+    padding-right: 70px;
+    border: 1px solid #4ab6e8;
+    margin-top: 59px;
+    h3 {
+        font-size: 37px;
+        margin: 0;
+        margin-left: 11px;
+        color: #4ab6e8;
+    }
+    p {
+        max-width: 991px;
+        font-weight: bold;
+        line-height: 32px;
+        font-size: 24px;
+        span {
+            color: #4ab6e8;
+        }
+    }
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.phone-number {
+    display: flex;
+    align-items: center;
+}
+
+.section1 {
+    padding-bottom: 99px;
+    .main-img {
+        max-width: 75%;
+    }
+}
+
+@media screen and(max-width: 1499px) {
+    .section1 {
+        .footer {
+            p {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 33px;
+            }
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1399px) {
+    .section1 {
+        .footer {
+            padding: 19px 33px;
+            padding-right: 64px;
+            p {
+                font-size: 17px;
+                line-height: 28px;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+            }
+            h3 {
+                font-size: 30px;
+            }
+        }
+        .phone {
+            padding: 30px 32px;
+        }
+
+        h1 {
+            font-size: 46px;
+            line-height: 46px;
+        }
+    }
+}
+
+@media screen and(max-width: 1199px) {
+    .section1 {
+        .footer {
+            padding: 16px 28px;
+            padding-right: 64px;
+            p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+            img {
+                width: 25px;
+                height: 25px;
+            }
+            h3 {
+                font-size: 27px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 991px) {
+    .section1 {
+        .footer {
+            flex-direction: column;
+            padding: 16px 28px;
+            p {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            .phone-number {
+                justify-content: center;
+            }
+        }
+        .left-content {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and(max-width: 767px) {
+    .section1 {
+        .left-content {
+            &::after {
+                display: none;
+            }
+            h1,
+            p {
+                text-align: center;
+            }
+            h1 {
+                font-size: 44px;
+                margin-top: 25px;
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .phone{
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 455px) {
+    .section1{
+        .phone p{
+            font-size: 16px;
+        }
+        h2{
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+.main-header {
+    margin-bottom: 51px;
+    .separator {
+        height: 1px;
+        background-color: #e6e6e6;
+        margin-bottom: 26px;
+    }
+    .step {
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+        p {
+            font-size: 18px;
+            line-height: 19px;
+        }
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        width: 79%;
+        align-items: center;
+        a {
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 13px;
+            &:hover {
+                color: #4ab6e8;
+            }
+        }
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.step-img {
+    margin-right: 7px;
+}
+
+.step-caption {
+    display: flex;
+    justify-content: space-between;
+    a {
+        color: #1a1a1a;
+    }
+}
+
+.hamburger {
+    margin: 0;
+    transform: scale(0.8);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: auto;
+    display: none;
+    z-index: 2;
+}
+.hamburger li {
+    list-style: none;
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 3px;
+    transform: translateY(-50%);
+    transition: 0.9s;
+}
+.hamburger li:nth-of-type(1) {
+    top: 20%;
+}
+.hamburger li:nth-of-type(2) {
+    top: 50%;
+}
+.hamburger li:nth-of-type(3),
+.hamburger li:nth-of-type(4) {
+    width: 50%;
+    top: 80%;
+}
+.hamburger li:nth-of-type(1),
+.hamburger li:nth-of-type(2),
+.hamburger li:nth-of-type(3) {
+    left: 0;
+}
+.hamburger li:nth-of-type(4) {
+    right: 0;
+}
+
+.hamburger.active li:nth-of-type(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.hamburger.active li:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+.hamburger.active li:nth-of-type(3) {
+    left: -50%;
+    opacity: 0;
+}
+.hamburger.active li:nth-of-type(4) {
+    right: -50%;
+    opacity: 0;
+}
+
+@media screen and(max-width: 991px) {
+    .main-header {
+        .step {
+            .step-img {
+                height: 75%;
+            }
+            a {
+                font-size: 14px;
+            }
+        }
+        .hamburger {
+            display: block;
+        }
+        nav {
+            position: absolute;
+            background: #f2f2f2;
+            width: 100%;
+            left: 0;
+            top: -202px;
+            flex-direction: column;
+            text-align: center;
+            transition: top 0.5s;
+            z-index: 1;
+            box-shadow: 1px 1px 18px rgb(0 0 0 / 20%);
+            padding: 15px 0;
+            &.active {
+                top: 0;
+            }
+            a {
+                padding: 15px 0;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 767px) {
+    .main-header {
+        .step-caption {
+            display: none;
+        }
+    }
+}

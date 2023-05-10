@@ -1,0 +1,227 @@
+.introduction {
+    position: relative;
+    .icon-scroll-top {
+        display: none;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: #4ab6e8;
+        border-radius: 4px;
+        padding: .5rem;
+        color: white;
+        font-size: 1.5rem;
+        z-index:10;
+        &.active {
+            display: block;
+        };
+    }
+
+    h1 {
+        margin-top: 39px;
+        margin-bottom: 48px;
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 60px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .main-content {
+        padding-top: 47px;
+        padding-left: 124px;
+        padding-bottom: 75px;
+    }
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-bottom: 56px;
+        flex-wrap: wrap;
+        a {
+            color: #1a1a1a;
+        }
+        .separator {
+            width: 1px;
+            height: 20px;
+            background-color: #1a1a1a;
+        }
+    }
+    .footer {
+        margin-bottom: 60px;
+        margin-top: 0;
+        p {
+            font-size: 24px;
+        }
+    }
+}
+
+.blue-links {
+    display: flex;
+    align-items: center;
+    width: 203px;
+    justify-content: space-between;
+    a,
+    p {
+        color: #4ab6e8;
+        font-size: 14px;
+        line-height: 15px;
+        font-weight: bold;
+    }
+}
+
+.square {
+    width: 346px;
+    height: 341px;
+    position: absolute;
+    background-color: #f2f2f2;
+    z-index: -1;
+}
+
+@media screen and(max-width: 1499px) {
+    .introduction {
+        .footer {
+            p {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 33px;
+            }
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        .main-content {
+            padding-bottom: 46px;
+        }
+    }
+}
+
+@media screen and(max-width: 1399px) {
+    .introduction {
+        .footer {
+            padding: 19px 33px;
+            padding-right: 64px;
+            p {
+                font-size: 17px;
+                line-height: 28px;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+            }
+            h3 {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1199px) {
+    .introduction {
+        .footer {
+            padding: 16px 28px;
+            padding-right: 64px;
+            p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+            img {
+                width: 25px;
+                height: 25px;
+            }
+            h3 {
+                font-size: 27px;
+            }
+        }
+        nav {
+            justify-content: initial;
+            .separator {
+                margin: 0 .5rem;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 991px) {
+    .introduction {
+        .main-content {
+            padding-top: 37px;
+            padding-left: 44px;
+        }
+
+        .footer {
+            flex-direction: column;
+            padding: 16px 28px;
+            p {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            .phone-number {
+                justify-content: center;
+            }
+        }
+        .main-content {
+            h1 {
+                font-size: 51px;
+                margin-top: 22px;
+                margin-bottom: 36px;
+                line-height: 55px;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 767px) {
+    .introduction {
+        .main-content {
+            padding-left: 0;
+            text-align: center;
+            h1 {
+                font-size: 45px;
+            }
+        }
+        .square {
+            display: none;
+        }
+    }
+}
+
+@media screen and(max-width: 575px) {
+    .introduction {
+        .main-content {
+            h1 {
+                margin-bottom: 20px;
+                line-height: 41px;
+                font-size: 35px;
+            }
+        }
+        .blue-links {
+            width: 164px;
+            a {
+                font-size: 12px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+
+        nav {
+            display: block;
+            .separator {
+                display: none;
+            }
+            a {
+                display: block;
+                text-align: center;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

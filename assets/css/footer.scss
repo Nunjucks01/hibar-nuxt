@@ -1,0 +1,33 @@
+footer {
+    nav {
+        padding: 40px 0;
+        justify-content: space-around;
+        width: 100%;
+        display: flex;
+        a {
+            color: #1a1a1a;
+            font-weight: bold;
+            &:hover {
+                color: #4ab6e8;
+            }
+        }
+    }
+    .separator {
+        background-color: #f1f0ee;
+        margin-bottom: 24px;
+        height: 1px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 24px !important;
+        text-align: center;
+    }
+}
+
+@media screen and(max-width: 767px) {
+    footer {
+        nav {
+            display: none;
+        }
+    }
+}
